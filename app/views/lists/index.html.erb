@@ -1,5 +1,5 @@
 <% states = ['New York', 'Connecticut', 'New Jersey'] %>
-<% cities = ['New York City', 'Stamford', 'Jersey City', 'Hartford', 'Trenton', 'Albany']%>
+<% cities = ['New York City', 'Stamford', 'Jersey City', 'Hartford', 'Trenton', 'Albany', 'Norwalk']%>
 
 <h2>States</h2>
 <ul>
@@ -13,5 +13,27 @@
 <ul>
   <% cities.each do |city| %>
     <li><%= city %></li>
+  <% end %>
+</ul>
+
+
+// Stretch
+
+<% cities_and_states = [
+                          ['New York', ['New York City', 'Albany']],
+                          ['Connecticut', ['Stamford', 'Hartford', 'Norwalk']],
+                          ['New Jersey', ['Jersey City', 'Trenton']]
+                        ] %>
+
+<h2>Cities & States</h2>
+
+<ul>
+  <% cities_and_states.each do |state_cities| %>
+    <li><%= state_cities[0] %></li>
+    <ul>
+      <% state_cities[1].each do |city|%>
+        <li><%= city %></li>
+      <% end %>
+    </ul>
   <% end %>
 </ul>
