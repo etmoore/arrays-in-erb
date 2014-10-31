@@ -1,4 +1,4 @@
-# Arrays in ERB
+# Arrays in ERB, a gSchool exercise
 
 ## MVP
 
